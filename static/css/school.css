@@ -12,3 +12,7 @@ header {
 .right {
     float: right;
 }
+
+.hide {
+    display: none;
+}
