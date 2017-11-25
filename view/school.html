@@ -4,13 +4,280 @@
         <meta charset="utf-8">
         <title>学校</title>
         <link rel="stylesheet" href="../static/js/lib/layui/css/layui.css">
+        <link rel="stylesheet" href="../static/css/school.css">
         <script type="text/javascript" src="../static/js/lib/sea.js"></script>
         <script>
     		document.write("<script type=\"text/javascript\" src=\"../static/js/lib/config.js?t="+(+ new Date())+"\"><\/script>");
     	</script>
+
     </head>
     <body>
-        <!-- <script src="../static/js/lib/layui/layui.js"></script> -->
+        <header class="layui-form-item">
+            <div class="layui-input-inline center-width">
+                <label class="layui-form-label">School</label>
+                <label class="layui-form-label">Design</label>
+            </div>
+            <div class="layui-input-inline center-width">
+                <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                <i class="layui-icon">&#xe615;</i>
+            </div>
+        </header>
+        <nav>
+            <ul class="layui-nav" lay-filter="">
+                <li class="layui-nav-item layui-this">
+                    <a href="">网站首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">机构设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">岗位职责</a></dd>
+                        <dd><a href="">管理规定</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">教学运行</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">通知公告</a></dd>
+                        <dd><a href="">教学动态</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">实践创新</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">实践教学</a></dd>
+                        <dd><a href="">毕业论文</a></dd>
+                        <dd><a href="">学科竞赛</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">招生考试</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">英语考试</a></dd>
+                        <dd><a href="">教师资格</a></dd>
+                        <dd><a href="">语言文字</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </nav>
+        <!-- 轮播图，其右侧为学校新闻 -->
+        <section class="section">
+            <div class="layui-row layui-col-space30">
+                <div class="layui-col-md7">
+                    <div class="layui-carousel" id="slide">
+                        <div carousel-item>
+                            <img src="../static/image/slide1.png">
+                            <img src="../static/image/slide2.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md5">
+                    <img src="../static/image/span.jpg">
+                    <div class="news">
+                        <a href="#" title="我校第十届教师教学技能竞赛成功举办">
+                            我校第十届教师教学技能竞赛成功举办
+                        </a>
+                        <p class="summary">
+                            本次比赛由教育部主办，安徽师范大学、全国高等学校体育教学
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="news">
+                        <a href="#" title="我校开展微课教学示范活动">
+                            我校开展微课教学示范活动
+                        </a>
+                        <p class="summary">
+                            我校在教师教学发展中心组织开展微课教学比赛获奖教师心得交
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="news">
+                        <a href="#" title="我校参加2017年全国高校体育教育专业学生大赛获得佳绩">
+                            我校参加2017年全国高校体育教育专业学生大赛获得佳绩
+                        </a>
+                        <p class="summary">
+                            第六届宠博会将在上海世博展览馆（1号馆）举行，作为沪上知
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 通知公告，高校资讯，招生考试 -->
+        <section class="section">
+            <div class="layui-row layui-col-space5">
+            <div class="layui-col-md4">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    通知公告
+                    <a href="#" class="right">MORE</a>
+                </blockquote>
+                <a href="#" title="关于2016届本科生毕业论文答辩工作的安排意见">
+                    关于2016届本科生毕业论文答辩工作的安排意见
+                </a>
+                <hr>
+                <a href="#" title="关于做好2017-2018学年度第一学期课程安排工作">
+                    关于做好2017-2018学年度第一学期课程安排工作
+                </a>
+                <hr>
+                <a href="#" title="关于2017届本科生毕业论文答辩工作的安排意见">
+                    关于2017届本科生毕业论文答辩工作的安排意见
+                </a>
+                <hr>
+                <a href="#" title="关于2017年夏季小学期开课的通知">
+                    关于2017年夏季小学期开课的通知
+                </a>
+                <hr>
+                <a href="#" title="我校本科招生录取工作圆满完成">
+                    我校本科招生录取工作圆满完成
+                </a>
+                <img src="../static/image/notice.jpg" alt="">
+            </div>
+            <div class="layui-col-md4">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    高校资讯
+                    <a href="#" class="right">MORE</a>
+                </blockquote>
+                <a href="#" title="第八届全国高等医学院校大学生临床技能竞赛成功举行">
+                    第八届全国高等医学院校大学生临床技能竞赛成功举行
+                </a>
+                <hr>
+                <a href="#" title="关于坚持正确导向促进高校高层次人才合理有序流">
+                    关于坚持正确导向促进高校高层次人才合理有序流
+                </a>
+                <hr>
+                <a href="#" title="2017年省级学位委员会工作会议在京召开 ">
+                    2017年省级学位委员会工作会议在京召开
+                </a>
+                <hr>
+                <a href="#" title="关于实施中华优秀传统文化传承发展工程的意见">
+                    关于实施中华优秀传统文化传承发展工程的意见
+                </a>
+                <hr>
+                <a href="#" title="普通高等学校学生管理规定 ">
+                    普通高等学校学生管理规定
+                </a>
+                <img src="../static/image/info.jpg" alt="">
+            </div>
+            <div class="layui-col-md4">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    招生考试
+                    <a href="#" class="right">MORE</a>
+                </blockquote>
+                <a href="#" title="关于2017年春季国家普通话水平测试报名的通知">
+                    关于2017年春季国家普通话水平测试报名的通知
+                </a>
+                <hr>
+                <a href="#" title="2017下半年《教师资格条例》实施办法">
+                    2017下半年《教师资格条例》实施办法
+                </a>
+                <hr>
+                <a href="#" title="党政机关公文处理工作条例">
+                    党政机关公文处理工作条例
+                </a>
+                <hr>
+                <a href="#" title="通用规范汉字表-国家标准">
+                    通用规范汉字表-国家标准
+                </a>
+                <hr>
+                <a href="#" title="普通话水平测试管理规定">
+                    普通话水平测试管理规定
+                </a>
+                <img src="../static/image/test.jpg" alt="">
+            </div>
+          </div>
+        </section>
+        <!-- 教学动态，栏目导航 -->
+        <section class="section">
+            <div class="layui-row layui-col-space30">
+                <div class="layui-col-md7">
+                    <blockquote class="layui-elem-quote layui-quote-nm">
+                        教学动态
+                        <a href="#" class="right">MORE</a>
+                    </blockquote>
+                    <div class="layui-row recently">
+                        <div class="layui-col-md3">
+                            <img src="../static/image/recently1.jpg" alt="">
+                        </div>
+                        <div class="layui-col-md9">
+                            <a href="#" title="我校第十届教师教学技能竞赛成功举办">
+                                我校第十届教师教学技能竞赛成功举办
+                                <span class="right">2017-08-25</span>
+                            </a>
+                            <p>本次比赛由教育部主办，安徽师范大学、全国高等学校体育教学</p>
+                        </div>
+                        <div class="layui-row recently">
+                            <div class="layui-col-md3">
+                                <img src="../static/image/recently2.jpg" alt="">
+                            </div>
+                            <div class="layui-col-md9">
+                                <a href="#" title="我校参加2017年全国高校体育教育专业学生大赛获得佳绩">
+                                    我校参加2017年全国高校体育教育专业学生大赛获得佳绩
+                                    <span class="right">2017-08-25</span>
+                                </a>
+                                <p>第六届宠博会将在上海世博展览馆（1号馆）举行，作为沪上知</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md5">
+                    <blockquote class="layui-elem-quote layui-quote-nm">
+                        栏目导航
+                    </blockquote>
+                    <div class="layui-row layui-col-space1">
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/setting.png" alt="">
+                            </a>
+                            <div>机构设置</div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/running.png" alt="">
+                            </a>
+                            <div>教学运行</div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/notice.png" alt="">
+                            </a>
+                            <div>通知公告</div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/rule.png" alt="">
+                            </a>
+                            <div>管理规定</div>
+                        </div>
+                    </div>
+                    <div class="layui-row layui-col-space1">
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/duty.png" alt="">
+                            </a>
+                            <div>岗位职责</div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/competition.png" alt="">
+                            </a>
+                            <div>学科竞赛</div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/teach.png" alt="">
+                            </a>
+                            <div>实践教学</div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <a href="#">
+                                <img src="../static/image/section/exam.png" alt="">
+                            </a>
+                            <div>招生考试</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="../static/js/lib/layui/layui.js"></script>
         <script>
     		seajs.use("../static/js/view/school.js")
     	</script>

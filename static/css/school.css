@@ -1,0 +1,14 @@
+header {
+    margin-top: 15px;
+}
+.center-width {
+    width: 48% !important;
+}
+
+.section {
+    margin: 20px;
+}
+
+.right {
+    float: right;
+}
