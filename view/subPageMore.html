@@ -12,18 +12,14 @@
     	</script>
     </head>
     <body>
-        <header class="layui-form-item">
+        <header class="layui-form-item section">
             <form class="layui-form" id="search">
-                <div class="layui-input-inline center-width">
-                    <label class="layui-form-label">School</label>
-                    <label class="layui-form-label">Design</label>
+                <div class="layui-inline">
+                    <label class="title red">School <span class="grey">Design</span></label>
                 </div>
-                <div class="layui-input-inline center-width">
-                    <input  type="text" name="key" class="layui-input">
-
-                    <button type="submit" class="">
-                        <i class="layui-icon">&#xe615;</i>
-                    </button>
+                <div class="layui-inline right">
+                    <input  type="text" name="key" class="layui-input search-input">
+                    <button type="submit" class="hide" lay-submit lay-filter="*"></button>
                 </div>
             </form>
         </header>
@@ -73,26 +69,33 @@
                 <ul id="result-list"></ul>
                 <div id="page"></div>
             </section>
-            <section class="section" id="more">
+            <section class="top-section index right" id="more">
                 <img src="../static/image/subPageMore.jpg" alt="">
-                <ul>
-                    <li>文章列表</li>
-                    <li>
-                        <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[语言文字]2017-08-25</span></a>
-                    </li>
-                    <li>
-                        <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[语言文字]2017-08-25</span></a>
-                    </li>
-                    <li>
-                        <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[语言文字]2017-08-25</span></a>
-                    </li>
-                    <li>
-                        <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[语言文字]2017-08-25</span></a>
-                    </li>
-                    <li>
-                        <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[语言文字]2017-08-25</span></a>
-                    </li>
-                </ul>
+                <div class="right-list">
+                    <div class="list-title red">
+                        <i class="layui-icon">&#xe623;</i>文章列表
+                    </div>
+                    <hr>
+                    <ul>
+                        <li>
+                            <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[ 语言文字 ] 2017-08-25</span></a>
+                        </li>
+                        <li>
+                            <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[ 语言文字 ] 2017-08-25</span></a>
+                        </li>
+                        <li>
+                            <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[ 语言文字 ] 2017-08-25</span></a>
+                        </li>
+                        <li>
+                            <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[ 语言文字 ] 2017-08-25</span></a>
+                        </li>
+                        <li>
+                            <a href="moreDetail.html">中华人民共和国国家通用语言文字法<span class="right">[ 语言文字 ] 2017-08-25</span></a>
+                        </li>
+                    </ul>
+                    <ul id="more-list"></ul>
+                    <div id="more-page"></div>
+                </div>
             </section>
         </main>
         <script type="text/html" id="list-tpl">
@@ -106,10 +109,21 @@
                 </li>
             {@/each}
         </script>
+        <script type="text/html" id="more-tpl">
+            {@each data as value, key}
+                <li>
+                    <a href="moreDetail.html">
+                        ${value.title}
+                        <span class="right">[ 语言文字 ] 2017-08-25</span>
+                    </a>
+                    <hr>
+                </li>
+            {@/each}
+        </script>
         <script src="../static/js/lib/layui/layui.js"></script>
         <script src="../static/js/data.js"></script>
         <script>
-    		seajs.use("../static/js/view/school.js")
+    		seajs.use("../static/js/view/index.js")
     	</script>
     </body>
 </html>

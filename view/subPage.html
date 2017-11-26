@@ -69,7 +69,7 @@
                 <ul id="result-list"></ul>
                 <div id="page"></div>
             </section>
-            <section class="top-section" id="content">
+            <section class="top-section index" id="content">
             </section>
         </main>
         <script type="text/html" id="list-tpl">
@@ -85,30 +85,33 @@
         </script>
         <script type="text/html" id="content-tpl">
             <img src="../static/image/subPage.jpg" alt="">
-            <div class="layui-row layui-col-space10">
+            <div class="layui-row layui-col-space20 top-offset">
                 <div class="layui-col-md3">
-                    <ul>
-                        <li>${data.channel}</li>
+                    <ul class="channel-ul">
+                        <li class="red-bg">${data.channel}</li>
                         {@each data.list as value, key}
-                            <li>
+                            <li class="item">
                                 <a href="#" {@if value.clicked}class="red"{@/if}>${value.title}</a>
                             </li>
                         {@/each}
                     </ul>
                 </div>
                 <div class="layui-col-md9">
-                    <blockquote class="layui-elem-quote layui-quote-nm">
+                    <blockquote class="layui-elem-quote layui-quote-nm quote-color">
                         {@each data.list as value, key}
                             {@if value.clicked}${value.title}{@/if}
                         {@/each}
-                        <a href="subPageMore.html" class="right">MORE</a>
+                        <a href="subPageMore.html" class="right grey">MORE</a>
                     </blockquote>
-                    <ul>
-                        <li><a href="moreDetail.html">文章一<span class="right">2017-08-25</span></a><hr></li>
-                        <li><a href="moreDetail.html">文章二<span class="right">2017-08-25</span></a><hr></li>
-                        <li><a href="moreDetail.html">文章三<span class="right">2017-08-25</span></a><hr></li>
-                        <li><a href="moreDetail.html">文章四<span class="right">2017-08-25</span></a><hr></li>
-                        <li><a href="moreDetail.html">文章五<span class="right">2017-08-25</span></a><hr></li>
+                    <hgroup>
+                    <hr>
+                    </hgroup>
+                    <ul class="article-list">
+                        <li><a href="moreDetail.html">文章一<span class="right">2017-08-25</span></a><hr class="dash-hr grey"></li>
+                        <li><a href="moreDetail.html">文章二<span class="right">2017-08-25</span></a><hr class="dash-hr grey"></li>
+                        <li><a href="moreDetail.html">文章三<span class="right">2017-08-25</span></a><hr class="dash-hr grey"></li>
+                        <li><a href="moreDetail.html">文章四<span class="right">2017-08-25</span></a><hr class="dash-hr grey"></li>
+                        <li><a href="moreDetail.html">文章五<span class="right">2017-08-25</span></a></li>
                     </ul>
                 </div>
             </div>

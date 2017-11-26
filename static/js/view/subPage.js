@@ -16,14 +16,13 @@ define(function(require, exports, module) {
             10: {channel: '招生考试', list: [{title: '英语考试', clicked: false,}, {title: '教师资格', clicked: false,}, {title: '语言文字', clicked: true,}],},
         }
 
-    layui.use(['element', 'carousel', 'jquery', 'laypage',], function(){
+    layui.use(['element', 'carousel', 'jquery', 'laypage', 'form'], function(){
         var $ = layui.$
 
         __main()
 
         function __main() {
             renderData('#content', '#content-tpl', pageMapper[pageId])
-            eventBind()
         }
 
         var laypage = layui.laypage
@@ -38,21 +37,16 @@ define(function(require, exports, module) {
             },
         })
 
+        var form = layui.form
+        form.on('submit(*)', function(data){
+            showPage('.search')
+            return false;
+        })
+
         function renderData(container, tpl, data) {
             $(container).empty().append(juicer($(tpl)[0].text, {data: data}));
         }
 
-        function eventBind() {
-            $('header').on('submit', '#search',function(e){
-                var event = e || window.event
-                if(event.preventDefault){
-                    event.preventDefault();
-                }else{
-                    event.returnValue = false;
-                }
-                showPage('.search')
-            });
-        }
         // 要显示的元素选择器，如 '.search'
         function showPage(ele) {
             $('.index').hide()

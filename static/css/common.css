@@ -125,12 +125,23 @@ blockquote a {
     color: #f13a3a;
 }
 
+.quote-color {
+    color: #b50003;
+}
+.red-bg {
+    background-color: #f13a3a;
+}
+
 .grey {
     color: #cccccc;
 }
 
 .top-section {
     margin: 0px 150px;
+}
+
+.top-offset {
+    margin-top: 30px;
 }
 
 /* moreDetail.html 样式*/
@@ -150,4 +161,60 @@ blockquote a {
 
 .foot div a {
     padding-left: 10px;
+}
+
+/* subPage.html 样式*/
+
+.channel-ul li{
+    border-bottom: 1px dashed #cccccc;
+    height: 45px;
+    line-height: 43px;
+    padding-left: 20px;
+}
+
+.channel-ul li:first-child {
+    font-size: 16px;
+    color: #ffffff;
+    padding-left: 10px;
+    border: 1px solid #f13a3a;
+}
+
+.channel-ul .item {
+    border-left: 1px solid #f1ecec;
+    border-right: 1px solid #f1ecec;
+}
+
+.channel-ul .item:last-child {
+    border-bottom: 1px solid #f1ecec;
+}
+
+.article-list a:hover {
+    cursor: pointer;
+    color: #b50003;
+}
+
+.article-list li:hover {
+    cursor: pointer;
+    color: #b50003;
+}
+
+/* subPageMore.html 样式 */
+.right-list {
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.right-list .list-title {
+    font-size: 16px;
+}
+
+.right-list li {
+    border-bottom: 1px dashed #cccccc;
+    height: 45px;
+    line-height: 43px;
+    padding-left: 10px;
+}
+
+.right-list a:hover {
+    color: #f13a3a;
 }

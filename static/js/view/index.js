@@ -26,6 +26,18 @@ define(function(require, exports, module) {
             },
         })
 
+        var moreLaypage = layui.laypage
+        var tpl = ''
+        moreLaypage.render({
+            elem: 'more-page',
+            count: data.length,
+            limit: 5,
+            jump: function(obj) {
+                var jumpData = data.slice((obj.curr - 1) * obj.limit, obj.limit * obj.curr)
+                renderData('#more-list', '#more-tpl', jumpData)
+            },
+        })
+
         var form = layui.form
         form.on('submit(*)', function(data){
             showPage('.search')
