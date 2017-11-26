@@ -62,16 +62,20 @@
         </nav>
         <main>
             <!-- 搜索结果页面 -->
-            <section class="section search hide">
+            <section class="top-section search hide">
                 <img src="../static/image/search.jpg" alt="">
-                <div>搜索结果</div>
-                <hr>
+                <div class="search-title red">
+                    <i class="layui-icon">&#xe623;</i>搜索结果
+                </div>
+                <hr class="dash-hr grey">
                 <ul id="result-list"></ul>
                 <div id="page"></div>
             </section>
             <section class="top-section index" id="content">
             </section>
         </main>
+        <footer>©2017 网站模板—学校 版权所有</footer>
+
         <script type="text/html" id="list-tpl">
             {@each data as value, key}
                 <li>
@@ -115,6 +119,17 @@
                     </ul>
                 </div>
             </div>
+        </script>
+        <script type="text/html" id="more-tpl">
+            {@each data as value, key}
+                <li>
+                    <a href="moreDetail.html">
+                        ${value.title}
+                        <span class="right">[ 语言文字 ] 2017-08-25</span>
+                    </a>
+                    <hr>
+                </li>
+            {@/each}
         </script>
 
         <script src="../static/js/lib/layui/layui.js"></script>

@@ -22,7 +22,23 @@ define(function(require, exports, module) {
         __main()
 
         function __main() {
+            showFocusTab()
             renderData('#content', '#content-tpl', pageMapper[pageId])
+        }
+
+        // 激活导航栏选中颜色
+        function showFocusTab() {
+            var channel = pageMapper[pageId]['channel']
+            var itemEles = $('.layui-nav-item')
+            for (var i = 0; i < itemEles.length; i++) {
+                var ele = $(itemEles[i]),
+                    eleChild = $(ele.children()[0])
+                log('ele', eleChild)
+                if (eleChild.text() === channel) {
+                    ele.addClass('blue-bg')
+                    break
+                }
+            }
         }
 
         var laypage = layui.laypage
@@ -31,6 +47,7 @@ define(function(require, exports, module) {
             elem: 'page',
             count: data.length,
             limit: 5,
+            theme: '#FF5722',
             jump: function(obj) {
                 var jumpData = data.slice((obj.curr - 1) * obj.limit, obj.limit * obj.curr)
                 renderData('#result-list', '#list-tpl', jumpData)

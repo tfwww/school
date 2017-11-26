@@ -19,6 +19,7 @@ define(function(require, exports, module) {
             elem: 'page',
             count: data.length,
             limit: 5,
+            theme: '#FF5722',
             jump: function(obj) {
                 var jumpData = data.slice((obj.curr - 1) * obj.limit, obj.limit * obj.curr)
                 renderData('#result-list', '#list-tpl', jumpData)
@@ -30,6 +31,7 @@ define(function(require, exports, module) {
             elem: 'more-page',
             count: data.length,
             limit: 5,
+            theme: '#FF5722',
             jump: function(obj) {
                 var jumpMoreData = data.slice((obj.curr - 1) * obj.limit, obj.limit * obj.curr)
                 renderData('#more-list', '#more-tpl', jumpMoreData)
@@ -42,11 +44,11 @@ define(function(require, exports, module) {
             return false;
         })
 
-        var element = layui.element
-        element.on('nav(nav)', function(ele){
-            var target = $(ele)
-            log('nav', target)
-        })
+        // var element = layui.element
+        // element.on('nav(tap)', function(ele){
+        //     var target = $(ele)
+        //     target.addClass('blue-bg')
+        // })
 
         function renderData(container, tpl, data) {
             $(container).empty().append(juicer($(tpl)[0].text, {data: data}));

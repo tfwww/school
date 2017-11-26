@@ -26,7 +26,7 @@
         </header>
         <!-- 导航栏 -->
         <nav>
-            <ul class="layui-nav" lay-filter="nav">
+            <ul class="layui-nav" lay-filter="tap">
                 <li class="layui-nav-item layui-this blue-bg">
                     <a href="index.html">网站首页</a>
                 </li>
@@ -294,14 +294,17 @@
                 </div>
             </section>
             <!-- 搜索结果页面 -->
-            <section class="section search hide">
+            <section class="top-section search hide">
                 <img src="../static/image/search.jpg" alt="">
-                <div>搜索结果</div>
+                <div class="search-title red">
+                    <i class="layui-icon">&#xe623;</i>搜索结果
+                </div>
                 <hr class="dash-hr grey">
                 <ul id="result-list"></ul>
                 <div id="page"></div>
             </section>
         </main>
+        <footer>©2017 网站模板—学校 版权所有</footer>
         <script type="text/html" id="list-tpl">
             {@each data as value, key}
                 <li>

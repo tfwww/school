@@ -1,3 +1,28 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+/* main的padding-bottom值要等于或大于footer的height值 */
+main {
+    padding-bottom: 100px;
+}
+footer {
+    text-align: center;
+    background-color: #000;
+    width: 100%;
+    height: 100px;
+    color: #cccccc;
+    margin: 0 auto;
+    line-height: 100px;
+    position:absolute;
+    bottom:0;
+}
+
 header {
     margin-top: 15px;
 }
@@ -6,11 +31,15 @@ header .title {
     font-size: 32px;
 }
 
+
 nav .layui-nav {
     padding-left: 150px;
 }
 
 /* 覆盖 layui nav 样式*/
+.layui-nav .layui-nav-item a {
+    color: #fff;
+}
 .layui-nav * {
     font-size: 16px;
 }
@@ -216,5 +245,14 @@ blockquote a {
 }
 
 .right-list a:hover {
+    color: #f13a3a;
+}
+
+/* 搜索结果页面样式 */
+.search-title {
+    margin-top: 10px;
+}
+
+#result-list a:hover {
     color: #f13a3a;
 }
