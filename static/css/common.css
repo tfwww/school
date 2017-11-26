@@ -29,6 +29,26 @@ nav .layui-nav {
     color: #fff;
 }
 
+hr {
+    height: 0px;
+    border-bottom: 1px dashed;
+}
+
+/**/
+.offset {
+    position: relative;
+    left: 65px;
+}
+.news {
+    margin-top: 38px;
+    font-size: 16px;
+}
+
+.news .summary {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 .search-input {
     background: url(../image/searchIcon.png) no-repeat;
     border-radius: 100px;
