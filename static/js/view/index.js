@@ -15,7 +15,6 @@ define(function(require, exports, module) {
         })
 
         var laypage = layui.laypage
-        var tpl = ''
         laypage.render({
             elem: 'page',
             count: data.length,
@@ -27,14 +26,13 @@ define(function(require, exports, module) {
         })
 
         var moreLaypage = layui.laypage
-        var tpl = ''
         moreLaypage.render({
             elem: 'more-page',
             count: data.length,
             limit: 5,
             jump: function(obj) {
-                var jumpData = data.slice((obj.curr - 1) * obj.limit, obj.limit * obj.curr)
-                renderData('#more-list', '#more-tpl', jumpData)
+                var jumpMoreData = data.slice((obj.curr - 1) * obj.limit, obj.limit * obj.curr)
+                renderData('#more-list', '#more-tpl', jumpMoreData)
             },
         })
 
