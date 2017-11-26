@@ -29,12 +29,28 @@ nav .layui-nav {
     color: #fff;
 }
 
-hr {
+.dash-hr {
     height: 0px;
     border-bottom: 1px dashed;
 }
 
+.layui-elem-quote.layui-quote-nm {
+    height: 0px;
+    line-height: 0px;
+    border-left-color: #b50003;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    font-size: 20px;
+}
+
 /**/
+blockquote a {
+    font-size: 15px;
+}
+.margin-top {
+    margin-top: 35px;
+}
 .offset {
     position: relative;
     left: 65px;
@@ -54,6 +70,39 @@ hr {
     border-radius: 100px;
     background-position: 310px;
     width: 350px;
+}
+
+.recently {
+    padding: 14px 0px;
+}
+
+.recently .article {
+    padding-left: 25px;
+    padding-right: 15px;
+}
+
+.recently .article a {
+    font-size: 16px;
+    width: 300px;
+    display: inline-block;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.recently .article p {
+    padding-top: 5px;
+}
+
+.channel a {
+    display: inline-block;
+    padding: 15px 20px;
+    padding-bottom: 10px;
+}
+
+.channel .c-label {
+    text-align: center;
 }
 
 .section {
