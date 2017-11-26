@@ -2,7 +2,7 @@ define(function(require, exports, module) {
     var debug = true
     var log = debug ? console.log.bind(console) : function() {}
 
-    layui.use(['element', 'carousel', 'jquery', 'laypage',], function(){
+    layui.use(['element', 'carousel', 'jquery', 'laypage', 'form'], function(){
         var $ = layui.$
 
         // 轮播图
@@ -26,33 +26,27 @@ define(function(require, exports, module) {
             },
         })
 
+        var form = layui.form
+        form.on('submit(*)', function(data){
+            showPage('.search')
+            return false;
+        })
+
         var element = layui.element
         element.on('nav(nav)', function(ele){
             var target = $(ele)
             log('nav', target)
-        });
+        })
 
         function renderData(container, tpl, data) {
             $(container).empty().append(juicer($(tpl)[0].text, {data: data}));
         }
 
-        function eventBind() {
-            $('header').on('submit', '#search',function(e){
-                var event = e || window.event
-                if(event.preventDefault){
-                    event.preventDefault();
-                }else{
-                    event.returnValue = false;
-                }
-                showPage('.search')
-            });
-        }
         // 要显示的元素选择器，如 '.search'
         function showPage(ele) {
             $('.index').hide()
             $(ele).show()
         }
 
-        eventBind()
     })
 })

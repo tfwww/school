@@ -12,18 +12,17 @@
     	</script>
     </head>
     <body>
-        <header class="layui-form-item">
+        <!-- 搜索栏 -->
+        <header class="layui-form-item section">
             <form class="layui-form" id="search">
-                <div class="layui-input-inline center-width">
-                    <label class="layui-form-label">School</label>
-                    <label class="layui-form-label">Design</label>
+                <div class="layui-inline">
+                    <label class="title red">School <span class="grey">Design</span></label>
                 </div>
-                <div class="layui-input-inline center-width">
-                    <input  type="text" name="key" class="layui-input">
-
-                    <button type="submit" class="">
+                <div class="layui-inline right">
+                    <input  type="text" name="key" class="layui-input search-input">
+                    <!-- <button type="submit" class="" lay-submit lay-filter="*">
                         <i class="layui-icon">&#xe615;</i>
-                    </button>
+                    </button> -->
                 </div>
             </form>
         </header>

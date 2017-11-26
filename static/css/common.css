@@ -1,12 +1,20 @@
 header {
     margin-top: 15px;
 }
-.center-width {
-    width: 48% !important;
+
+header .title {
+    font-size: 32px;
+}
+
+.search-input {
+    background: url(../image/searchIcon.png) no-repeat;
+    border-radius: 100px;
+    background-position: 310px;
+    width: 350px;
 }
 
 .section {
-    margin: 20px;
+    margin: 40px 150px
 }
 
 .right {
@@ -19,4 +27,8 @@ header {
 
 .red {
     color: #f13a3a;
+}
+
+.grey {
+    color: #cccccc;
 }
