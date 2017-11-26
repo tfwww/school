@@ -6,6 +6,29 @@ header .title {
     font-size: 32px;
 }
 
+nav .layui-nav {
+    padding-left: 150px;
+}
+
+/* 覆盖 layui nav 样式*/
+.layui-nav * {
+    font-size: 16px;
+}
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
+    background-color: initial;
+}
+.layui-nav .layui-nav-more {
+    border-style: none;
+}
+
+.layui-nav-child {
+    background-color: #21a4d5;
+}
+
+.layui-nav .layui-nav-child a {
+    color: #fff;
+}
+
 .search-input {
     background: url(../image/searchIcon.png) no-repeat;
     border-radius: 100px;
@@ -14,7 +37,11 @@ header .title {
 }
 
 .section {
-    margin: 40px 150px
+    margin: 40px 150px;
+}
+
+.blue-bg {
+    background-color: #21a4d5;
 }
 
 .right {
