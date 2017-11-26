@@ -4,16 +4,16 @@ define(function(require, exports, module) {
     var url = require("../module/url.js")
     var pageId = url.getParam("pageId") || '',
         pageMapper = {
-            1: [{title: '岗位职责', clicked: true,}, {title: '管理规定', clicked: false,}],
-            2: [{title: '岗位职责', clicked: false,}, {title: '管理规定', clicked: true,}],
-            3: [{title: '通知公告', clicked: true,}, {title: '教学动态', clicked: false,}],
-            4: [{title: '通知公告', clicked: false,}, {title: '教学动态', clicked: true,}],
-            5: [{title: '实践教学', clicked: true,}, {title: '毕业论文', clicked: false,}, {title: '学科竞赛', clicked: false,}],
-            6: [{title: '实践教学', clicked: false,}, {title: '毕业论文', clicked: true,}, {title: '学科竞赛', clicked: false,}],
-            7: [{title: '实践教学', clicked: false,}, {title: '毕业论文', clicked: false,}, {title: '学科竞赛', clicked: true,}],
-            8: [{title: '英语考试', clicked: true,}, {title: '教师资格', clicked: false,}, {title: '语言文字', clicked: false,}],
-            9: [{title: '英语考试', clicked: false,}, {title: '教师资格', clicked: true,}, {title: '语言文字', clicked: false,}],
-            10: [{title: '英语考试', clicked: false,}, {title: '教师资格', clicked: false,}, {title: '语言文字', clicked: true,}],
+            1: {channel: '机构设置', list: [{title: '岗位职责', clicked: true,}, {title: '管理规定', clicked: false,}],},
+            2: {channel: '机构设置', list: [{title: '岗位职责', clicked: false,}, {title: '管理规定', clicked: true,}],},
+            3: {channel: '教学运行', list: [{title: '通知公告', clicked: true,}, {title: '教学动态', clicked: false,}],},
+            4: {channel: '教学运行', list: [{title: '通知公告', clicked: false,}, {title: '教学动态', clicked: true,}],},
+            5: {channel: '实践创新', list: [{title: '实践教学', clicked: true,}, {title: '毕业论文', clicked: false,}, {title: '学科竞赛', clicked: false,}],},
+            6: {channel: '实践创新', list: [{title: '实践教学', clicked: false,}, {title: '毕业论文', clicked: true,}, {title: '学科竞赛', clicked: false,}],},
+            7: {channel: '实践创新', list: [{title: '实践教学', clicked: false,}, {title: '毕业论文', clicked: false,}, {title: '学科竞赛', clicked: true,}],},
+            8: {channel: '招生考试', list: [{title: '英语考试', clicked: true,}, {title: '教师资格', clicked: false,}, {title: '语言文字', clicked: false,}],},
+            9: {channel: '招生考试', list: [{title: '英语考试', clicked: false,}, {title: '教师资格', clicked: true,}, {title: '语言文字', clicked: false,}],},
+            10: {channel: '招生考试', list: [{title: '英语考试', clicked: false,}, {title: '教师资格', clicked: false,}, {title: '语言文字', clicked: true,}],},
         }
 
     layui.use(['element', 'carousel', 'jquery', 'laypage',], function(){

@@ -128,3 +128,26 @@ blockquote a {
 .grey {
     color: #cccccc;
 }
+
+.top-section {
+    margin: 0px 150px;
+}
+
+/* moreDetail.html 样式*/
+
+.article {
+    margin: 80px 10px 0px 10px;
+}
+
+.article .bottom {
+    display: block;
+    padding-bottom: 30px;
+}
+
+.foot {
+    margin-top: 25px;
+}
+
+.foot div a {
+    padding-left: 10px;
+}
