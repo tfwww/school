@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>学校</title>
+        <link rel="stylesheet" href="../static/js/lib/layui/css/layui.css">
+        <link rel="stylesheet" href="../static/css/common.css">
+        <script type="text/javascript" src="../static/js/lib/sea.js"></script>
+        <script type="text/javascript" src="../static/js/lib/juicer-min.js"></script>
+        <script>
+    		document.write("<script type=\"text/javascript\" src=\"../static/js/lib/config.js?t="+(+ new Date())+"\"><\/script>");
+    	</script>
+    </head>
+    <body>
+        <header class="layui-form-item">
+            <form class="layui-form" id="search">
+                <div class="layui-input-inline center-width">
+                    <label class="layui-form-label">School</label>
+                    <label class="layui-form-label">Design</label>
+                </div>
+                <div class="layui-input-inline center-width">
+                    <input  type="text" name="key" class="layui-input">
+
+                    <button type="submit" class="">
+                        <i class="layui-icon">&#xe615;</i>
+                    </button>
+                </div>
+            </form>
+        </header>
+        <nav>
+            <ul class="layui-nav" lay-filter="nav">
+                <li class="layui-nav-item layui-this">
+                    <a href="index.html">网站首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">机构设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="subPage.html?pageId=1">岗位职责</a></dd>
+                        <dd><a href="subPage.html?pageId=2">管理规定</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">教学运行</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="subPage.html?pageId=3">通知公告</a></dd>
+                        <dd><a href="subPage.html?pageId=4">教学动态</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">实践创新</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="subPage.html?pageId=5">实践教学</a></dd>
+                        <dd><a href="subPage.html?pageId=6">毕业论文</a></dd>
+                        <dd><a href="subPage.html?pageId=7">学科竞赛</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">招生考试</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="subPage.html?pageId=8">英语考试</a></dd>
+                        <dd><a href="subPage.html?pageId=9">教师资格</a></dd>
+                        <dd><a href="subPage.html?pageId=10">语言文字</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <!-- 搜索结果页面 -->
+            <section class="section search hide">
+                <img src="../static/image/search.jpg" alt="">
+                <div>搜索结果</div>
+                <hr>
+                <ul id="result-list"></ul>
+                <div id="page"></div>
+            </section>
+            <section class="section" id="content">
+            </section>
+        </main>
+        <script type="text/html" id="list-tpl">
+            {@each data as value, key}
+                <li>
+                    <a href="${value.link}">
+                        <strong>[${value.type}]</strong>
+                        ${value.title}
+                    </a>
+                    <hr>
+                </li>
+            {@/each}
+        </script>
+        <script type="text/html" id="content-tpl">
+            <img src="../static/image/subPage.jpg" alt="">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md3">
+                    <ul>
+                        {@each data as value, key}
+                            <li>
+                                <a href="#" {@if value.clicked}class="red"{@/if}>${value.title}</a>
+                            </li>
+                        {@/each}
+                    </ul>
+                </div>
+                <div class="layui-col-md9">
+                    <blockquote class="layui-elem-quote layui-quote-nm">
+                        {@each data as value, key}
+                            {@if value.clicked}${value.title}{@/if}
+                        {@/each}
+                        <a href="subPageMore.html" class="right">MORE</a>
+                    </blockquote>
+                    <ul>
+                        <li><a href="moreDetail.html">文章一<span class="right">2017-08-25</span></a><hr></li>
+                        <li><a href="moreDetail.html">文章二<span class="right">2017-08-25</span></a><hr></li>
+                        <li><a href="moreDetail.html">文章三<span class="right">2017-08-25</span></a><hr></li>
+                        <li><a href="moreDetail.html">文章四<span class="right">2017-08-25</span></a><hr></li>
+                        <li><a href="moreDetail.html">文章五<span class="right">2017-08-25</span></a><hr></li>
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+        <script src="../static/js/lib/layui/layui.js"></script>
+        <script src="../static/js/data.js"></script>
+        <script>
+    		seajs.use("../static/js/view/subPage.js")
+    	</script>
+    </body>
+</html>

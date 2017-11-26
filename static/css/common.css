@@ -16,3 +16,7 @@ header {
 .hide {
     display: none;
 }
+
+.red {
+    color: #f13a3a;
+}

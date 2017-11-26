@@ -21,14 +21,16 @@ define(function(require, exports, module) {
             count: data.length,
             limit: 5,
             jump: function(obj) {
-                log('obj', obj.curr * obj.limit - obj.limit)
-                log('obj 2', obj.limit)
                 var jumpData = data.slice((obj.curr - 1) * obj.limit, obj.limit * obj.curr)
-                log('data', data)
-                log('jumpData', jumpData)
                 renderData('#result-list', '#list-tpl', jumpData)
             },
         })
+
+        var element = layui.element
+        element.on('nav(nav)', function(ele){
+            var target = $(ele)
+            log('nav', target)
+        });
 
         function renderData(container, tpl, data) {
             $(container).empty().append(juicer($(tpl)[0].text, {data: data}));
@@ -42,14 +44,15 @@ define(function(require, exports, module) {
                 }else{
                     event.returnValue = false;
                 }
-                showSearchPage()
+                showPage('.search')
             });
         }
-
-        function showSearchPage() {
+        // 要显示的元素选择器，如 '.search'
+        function showPage(ele) {
             $('.index').hide()
-            $('.search').show()
+            $(ele).show()
         }
+
         eventBind()
     })
 })
