@@ -60,9 +60,16 @@ define(function(require, exports, module) {
             $(ele).show()
         }
 
-        // $('.layui-nav-item').hover(function(){
-        //     log('a')
-        // })
+        $('.layui-nav-item').hover(function(event){
+            log('eve', event.target)
+            var target = $(event.target).find('span')
+            log('in')
+            target.show('fast')
+        },function(event){
+            log('out')
+            var target = $(event.target).find('span')
+            target.hide('fast')
+        })
 
     })
 })

@@ -35,7 +35,7 @@ define(function(require, exports, module) {
                     eleChild = $(ele.children()[0])
                 log('ele', eleChild)
                 if (eleChild.text() === channel) {
-                    ele.addClass('blue-bg')
+                    eleChild.addClass('blue-bg')
                     break
                 }
             }

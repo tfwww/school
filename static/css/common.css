@@ -44,14 +44,34 @@ nav .layui-nav {
     font-size: 16px;
 }
 .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
-    background-color: initial;
+    background-color: transparent;
 }
+/* 三角形 */
 .layui-nav .layui-nav-more {
-    border-style: none;
+    /*border-style: none;*/
+    display: none;
+    top: 68px;
+    left: 57px;
+    border-color: transparent transparent #21a4d5;
+    /*transition: all;
+    -webkit-transition: all;*/
 }
 
 .layui-nav-child {
     background-color: #21a4d5;
+    border-color: #21a4d5;
+    top: 71px;
+}
+
+.layui-anim {
+    -webkit-animation-duration: 0s;
+     animation-duration: 0s;
+    /*-webkit-animation-fill-mode: both;
+    animation-fill-mode: both;*/
+}
+
+.layui-nav-child dd {
+    text-align: center;
 }
 
 .layui-nav .layui-nav-child a {
@@ -90,7 +110,7 @@ blockquote a {
 }
 .offset {
     position: relative;
-    left: 65px;
+    left: 40px;
 }
 .news {
     margin-top: 38px;
@@ -263,4 +283,13 @@ blockquote a {
 
 #result-list a:hover {
     color: #f13a3a;
+}
+
+/* 修复在大屏幕下向右偏移的 bug */
+section img {
+    width: 100%;
+}
+
+main img {
+    width: 100%;
 }
