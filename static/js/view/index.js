@@ -60,5 +60,9 @@ define(function(require, exports, module) {
             $(ele).show()
         }
 
+        // $('.layui-nav-item').hover(function(){
+        //     log('a')
+        // })
+
     })
 })

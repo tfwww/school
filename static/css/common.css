@@ -58,6 +58,14 @@ nav .layui-nav {
     color: #fff;
 }
 
+.layui-nav .layui-nav-item a:hover {
+    background-color: #21a4d5;
+}
+
+.layui-nav .layui-nav-item {
+    padding: 0px 10px;
+}
+
 .dash-hr {
     height: 0px;
     border-bottom: 1px dashed;
