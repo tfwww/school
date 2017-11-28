@@ -14,7 +14,7 @@
     </head>
     <body>
         <!-- 搜索栏 -->
-        <header class="layui-form-item section">
+        <header class="layui-form-item layui-main">
             <form class="layui-form" id="search">
                 <div class="layui-inline">
                     <label class="title red">School <span class="grey">Design</span></label>
@@ -26,7 +26,7 @@
             </form>
         </header>
         <nav>
-            <ul class="layui-nav" lay-filter="nav">
+            <ul class="layui-nav layui-main" lay-filter="nav">
                 <li class="layui-nav-item layui-this">
                     <a href="index.html">网站首页</a>
                 </li>
@@ -62,7 +62,7 @@
                 </li>
             </ul>
         </nav>
-        <main>
+        <main class="layui-main">
             <!-- 搜索结果页面 -->
             <section class="top-section search hide">
                 <img src="../static/image/search.jpg" alt="">
@@ -99,10 +99,22 @@
                         下一篇
                         <a href="moreDetail.html">xxxxxx</a>
                     </div>
-                    <div class="layui-col-xs6 ">
-                        <div class="right social-share" data-sites="weibo,qq,qzone,wechat">
+                    <div class="layui-col-xs6">
+                        <!-- <div class="right social-share" data-sites="weibo,qq,qzone,wechat" data-initialized="true">
                             分享到：
-                        </div>
+                            <a href="#" class="social-share-icon icon-a"></a>
+                            <a href="#" class="social-share-icon icon-qq"></a>
+                            <a href="#" class="social-share-icon icon-qzone"></a>
+                            <a href="#" class="social-share-icon icon-wechat"></a>                            
+                        </div> -->
+                        <span class="share-label">分享到：</span>
+                        <span class="bdsharebuttonbox right">
+                            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                            <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+                            <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>                                
+                        </span> 
                     </div>
                 </div>
             </section>
@@ -144,6 +156,7 @@
         </script>
         <script src="../static/js/lib/layui/layui.js"></script>
         <script src="../static/js/data.js"></script>
+        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>                                      
         <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
         <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
         <script src="../static/js/lib/share/js/social-share.min.js"></script>

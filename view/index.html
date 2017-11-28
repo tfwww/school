@@ -13,7 +13,7 @@
     </head>
     <body>
         <!-- 搜索栏 -->
-        <header class="layui-form-item section">
+        <header class="layui-form-item layui-main">
             <form class="layui-form" id="search">
                 <div class="layui-inline">
                     <label class="title red">School <span class="grey">Design</span></label>
@@ -26,7 +26,7 @@
         </header>
         <!-- 导航栏 -->
         <nav>
-            <ul class="layui-nav" lay-filter="tap">
+            <ul class="layui-nav layui-main" lay-filter="tap">
                 <li class="layui-nav-item layui-this">
                     <a href="index.html" class="blue-bg">网站首页</a>
                 </li>
@@ -62,9 +62,9 @@
                 </li>
             </ul>
         </nav>
-        <main>
+        <main class="layui-main">
             <!-- 轮播图，其右侧为学校新闻 -->
-            <section class="section index">
+            <section class="index-first-section index">
                 <div class="layui-row">
                     <div class="layui-col-md7">
                         <div class="layui-carousel" id="slide">
@@ -107,7 +107,7 @@
                 </div>
             </section>
             <!-- 通知公告，高校资讯，招生考试 -->
-            <section class="section index">
+            <section class="index">
                 <div class="layui-row layui-col-space15">
                     <div class="layui-col-md4">
                         <blockquote class="layui-elem-quote layui-quote-nm">
@@ -199,7 +199,7 @@
                 </div>
             </section>
             <!-- 教学动态，栏目导航 -->
-            <section class="section index">
+            <section class="index">
                 <div class="layui-row layui-col-space30">
                     <div class="layui-col-md7">
                         <blockquote class="layui-elem-quote layui-quote-nm">

@@ -34,17 +34,23 @@ footer span:first-child {
 }
 
 header {
-    margin-top: 15px;
+    padding-top: 15px;
 }
 
 header .title {
     font-size: 32px;
 }
 
-
-nav .layui-nav {
-    padding-left: 150px;
+nav {
+    background-color: #393D49;
 }
+
+.layui-nav {
+    padding: 0px !important;
+}
+/* nav .layui-nav {
+    padding-left: 150px;
+} */
 
 /* 覆盖 layui nav 样式*/
 .layui-nav .layui-nav-item a {
@@ -63,6 +69,7 @@ nav .layui-nav {
     top: 68px;
     left: 57px;
     border-color: transparent transparent #21a4d5;
+    z-index: 1;
     /*transition: all;
     -webkit-transition: all;*/
 }
@@ -126,7 +133,7 @@ blockquote a {
     left: 40px;
 }
 .news {
-    margin-top: 38px;
+    margin-top: 35px;
     font-size: 16px;
 }
 
@@ -208,7 +215,7 @@ blockquote a {
 
 /* 修复不同屏幕图片拉伸问题 */
 .top-section img {
-    width: 1100px;
+    width: 1062px;
     height: 300px; 
 }
 
@@ -305,12 +312,26 @@ section img {
     width: 100%;
 }
 
-main img {
+/* main img {
     width: 100%;
-}
+} */
 
 /* aboutUs.html 样式 */
 .about-img-box img {
     width: 210px;
     height: 150px;
+}
+
+.layui-main {
+    width: 1062px !important;
+}
+
+/* index.html 样式 */
+.index-first-section {
+    margin-top: 40px;
+}
+
+nav ul{
+    position: relative;
+    left: -8px;
 }
