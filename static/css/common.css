@@ -18,9 +18,18 @@ footer {
     height: 100px;
     color: #cccccc;
     margin: 0 auto;
-    line-height: 100px;
+    /* line-height: 100px; */
     position:absolute;
     bottom:0;
+}
+
+/* 页脚样式 */
+footer .layui-breadcrumb {
+    display: inherit;
+}
+
+footer span:first-child {
+    padding-top: 20px;
 }
 
 header {
