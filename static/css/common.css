@@ -317,6 +317,9 @@ section img {
 } */
 
 /* aboutUs.html 样式 */
+.about-img-box {
+    text-align: center;
+}
 .about-img-box img {
     width: 210px;
     height: 150px;
@@ -334,4 +337,17 @@ section img {
 nav ul{
     position: relative;
     left: -8px;
+}
+
+/* 分享按钮的样式 */
+.share-box {
+    margin-right: -18px;
+}
+.share-box span{
+    display: inline-block;
+}
+
+.share-box .share-label {
+    position: relative;
+    top: -29px;
 }
