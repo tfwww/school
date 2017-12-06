@@ -12,7 +12,7 @@
     	</script>
     </head>
     <body>
-        <header class="layui-form-item layui-main">
+        <!-- <header class="layui-form-item layui-main">
             <form class="layui-form" id="search">
                 <div class="layui-inline">
                     <label class="title red">School <span class="grey">Design</span></label>
@@ -22,9 +22,12 @@
                     <button type="submit" class="hide" lay-submit lay-filter="*"></button>
                 </div>
             </form>
-        </header>
+        </header> -->
         <nav>
             <ul class="layui-nav layui-main" lay-filter="nav">
+                <span class="logo-wrapper">
+                    <img src="../static/image/logo.png" alt="">
+                </span>
                 <li class="layui-nav-item layui-this">
                     <a href="index.html">网站首页</a>
                 </li>
@@ -104,10 +107,10 @@
             <div class="layui-row layui-col-space20 top-offset">
                 <div class="layui-col-md3">
                     <ul class="channel-ul">
-                        <li class="red-bg">${data.channel}</li>
+                        <li class="blue-bg">${data.channel}</li>
                         {@each data.list as value, key}
                             <li class="item">
-                                <a href="#" {@if value.clicked}class="red"{@/if}>${value.title}</a>
+                                <a href="#" {@if value.clicked}class="blue"{@/if}>${value.title}</a>
                             </li>
                         {@/each}
                     </ul>

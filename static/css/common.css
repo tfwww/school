@@ -45,6 +45,11 @@ nav {
     background-color: #393D49;
 }
 
+.logo-wrapper {
+    position: absolute;
+    left: -60px;
+}
+
 .layui-nav {
     padding: 0px !important;
 }
@@ -111,7 +116,7 @@ nav {
 .layui-elem-quote.layui-quote-nm {
     height: 0px;
     line-height: 0px;
-    border-left-color: #b50003;
+    border-left-color: #21a4d5;
     border-top-width: 0px;
     border-bottom-width: 0px;
     border-right-width: 0px;
@@ -202,8 +207,12 @@ blockquote a {
     color: #f13a3a;
 }
 
+.blue {
+    color: #21a4d5;
+}
+
 .quote-color {
-    color: #b50003;
+    color: #21a4d5;
 }
 .red-bg {
     background-color: #f13a3a;
@@ -255,7 +264,7 @@ blockquote a {
     font-size: 16px;
     color: #ffffff;
     padding-left: 10px;
-    border: 1px solid #f13a3a;
+    border: 1px solid #21a4d5;
 }
 
 .channel-ul .item {
@@ -269,7 +278,7 @@ blockquote a {
 
 .article-list a:hover {
     cursor: pointer;
-    color: #b50003;
+    color: #21a4d5;
 }
 
 .article-list li:hover {
