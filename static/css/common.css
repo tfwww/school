@@ -223,7 +223,7 @@ blockquote a {
 }
 
 /* 修复不同屏幕图片拉伸问题 */
-.top-section img {
+.top-section > img:first-child {
     width: 1062px;
     height: 300px; 
 }
@@ -317,7 +317,7 @@ blockquote a {
 }
 
 /* 修复在大屏幕下向右偏移的 bug */
-section img {
+section > img:first-child {
     width: 100%;
 }
 
@@ -329,7 +329,7 @@ section img {
 .about-img-box {
     text-align: center;
 }
-.about-img-box img {
+.about-img-box > img:first-child {
     width: 210px;
     height: 150px;
 }
